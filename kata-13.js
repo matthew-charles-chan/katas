@@ -1,13 +1,13 @@
 const urlDecode = function(text) {
-  const result = {}
-  let arraysWithoutSpecialChar = text.split('%20').join(' ').split('&')
-  for(item of arraysWithoutSpecialChar) {
-    let keyArray = item.split('=')
-    for (i = 0; i < keyArray.length; i++) {
-      result[keyArray[0]] = keyArray[1]
+  const result = {};
+  let formattedArray = text.split('%20').join(' ').split('&');
+  for (let item of formattedArray) {
+    let keyArray = item.split('=');
+    for (let i = 0; i < keyArray.length; i++) {
+      result[keyArray[0]] = keyArray[1];
     }
   }
-  return result
+  return result;
 };
 
 
